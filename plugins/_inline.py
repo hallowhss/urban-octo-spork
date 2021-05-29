@@ -137,7 +137,6 @@ async def setting(event):
     cmd = len(z)
     await event.edit(
         get_string("inline_4").format(
-            OWNER_NAME,
             len(PLUGINS),
             len(ADDONS),
             cmd,
