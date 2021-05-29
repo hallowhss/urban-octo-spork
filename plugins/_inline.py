@@ -87,7 +87,6 @@ async def inline_handler(event):
         file=_file_to_replace,
         link_preview=False,
         text=get_string("inline_4").format(
-            OWNER_NAME,
             len(PLUGINS),
             len(ADDONS),
             cmd,
