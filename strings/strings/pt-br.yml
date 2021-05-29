@@ -44,7 +44,7 @@ afk_7: "Está AFK pelo motivo {}"
 afk_8: "Atualmente AFK."
 
 # bot
-alive_1: "**𝗘𝘀𝗼𝘁𝗲𝗿𝗶𝗸'𝘀 𝗨𝘀𝗲𝗿𝗯𝗼𝘁**\n\n**{}**\n\n➖➖➖➖➖➖➖➖➖➖➖\n**👤 Owner:** `{}`\n**📂 Versão:** `{}`\n**⏲ Uptime:** `{}`\n🐍 **Python:** `{}`\n📤 **Branch:** `{}`\n➖➖➖➖➖➖➖➖➖➖➖"
+alive_1: "**𝗘𝘀𝗼𝘁𝗲𝗿𝗶𝗸'𝘀 𝗨𝘀𝗲𝗿𝗯𝗼𝘁**\n\n**{}**\n\n➖➖➖➖➖➖➖➖➖➖➖\n**👤 Owner:** `{}` - `{}`\n**📂 Versão:** `{}`\n**⏲ Uptime:** `{}`\n🐍 **Python:** `{}`\n📤 **Branch:** `{}`\n➖➖➖➖➖➖➖➖➖➖➖"
 log: "**Heroku** Ultroid Logs.\nColado [aqui]({}) também!"
 ping: "**Pong !!** `{}ms`\n**Uptime** - `{}`"
 usage: "**⚙️ Uso do Dynos**:\n\n-> **Dyno usado por** `{}`:\n  •  **{}h**  **{}m** |** `[{}%]`\n-> **Dyno cota de horas restantes neste mês**:\n  •  **{}h**  **{}m |** `[{}%]`\n\n**Espaço Total em Disco**: `{}`\n**Usado**: `{}`\n**Livre**: `{}`\n\n**📊 Uso de Dados\n**Upload**: `{}`\n**Down**: `{}`\n\n**CPU**: `{}%`\n**RAM**: `{}%`\n**DISCO**: `{}%`"
