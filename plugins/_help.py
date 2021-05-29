@@ -57,7 +57,6 @@ async def ult(ult):
             return await ultroid_bot.send_message(
                 ult.chat_id,
                 get_string("inline_4").format(
-                    OWNER_NAME,
                     len(PLUGINS) - 5,
                     len(ADDONS),
                     cmd,
