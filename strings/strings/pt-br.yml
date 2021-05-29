@@ -19,15 +19,15 @@ autopic_2: "Nenhum resultado encontrado para `{}`"
 autopic_3: "Tenho uma coleção `{}` relacionado à sua pesquisa !\nIniciando Autopic !"
 
 # inline
-inline_1: "[Sᴜᴘorte Uʟᴛʀᴏɪᴅ](t.me/ultroidsupport)\n\n**Menu De Ajuda {}.\n\nPʟᴜɢɪɴs ~ {}**"
-inline_2: "[Sᴜᴘorte Uʟᴛʀᴏɪᴅ](t.me/ultroidsupport)\n\n**Mᴇɴᴜ Dᴇ Ajuda {}.\n\nExtensões ~ {}**"
-inline_3: "[Sᴜᴘorte Uʟᴛʀᴏɪᴅ](t.me/ultroidsupport)\n\n**Mᴇɴᴜ Dᴇ Ajuda {}.\n\nExtensões ~ {}\n\nDefina **`.setredis Extensões para True`** e REINICIE PARA OBTER EXTENSÕES.**"
-inline_4: "** Bᴏᴛ De {}\n\nMenu Principal\n\nPʟᴜɢɪɴs ~ {}\nExtensões ~ {}\nTᴏᴛᴀʟ de Cᴏᴍᴀɴᴅos ~ {}**"
-inline_5: "**O Menu Foi Fechado**"
+inline_1: "\n**Menu**\n\n**Plugins:** {}**"
+inline_2: "\n**Menu**\n\n**Extensões:** {}"
+inline_3: "\n**Menu**\n\n**Extensões:** {}\n\nDefina **`.setredis extensões para True`** e REINICIE PARA OBTER EXTENSÕES.**"
+inline_4: "** 𝗘𝘅𝗰𝗮𝗹𝗶𝗯𝘂𝗿 está ativo e a todo vapor...**\n\n**MAIN MENU**\n\n**Plugins:** {}\n**Extensões:** {}\n**Comandos Disponíveis:** {}"
+inline_5: "**O menu foi fechado.**"
 
 # tagnotif
-tagnot_1: "{} mencionou você em {}\n\n```{}```\n\n[📨 Mensagem 📨]({})"
-tagnot_2: "{} respondeu sua mensagem em {}\n\n [📨 Mensagem 📨]({})"
+tagnot_1: "{} mencionou você em {}\n\n```{}```\n\n[📨 Mensagem]({})"
+tagnot_2: "{} respondeu sua mensagem em {}\n\n [📨 Mensagem]({})"
 
 # whisper
 wspr_1: "@{} mensagem secreta para você.\nExclua sua mensagem após ler.\nOu a próxima mensagem não será atualizada."
@@ -44,10 +44,10 @@ afk_7: "Está AFK pelo motivo {}"
 afk_8: "Atualmente AFK."
 
 # bot
-alive_1: "**O Ultroid Userbot...**\n\n**{}**\n\n┏━━━━━━━━━━━━━━━━━━━━━\n┣ **Proprietário** - `{}`\n┣ **Versão** - `{}`\n┣ **Py-Ultroid** - `{}`\n┣ **Em Atividade** - `{}`\n┣ **Python** - `{}`\n┣ **Telethon** - `{}`\n┣ **Filial** - `{}`\n┗━━━━━━━━━━━━━━━━━━━━━"
+alive_1: "**𝗘𝘀𝗼𝘁𝗲𝗿𝗶𝗸'𝘀 𝗨𝘀𝗲𝗿𝗯𝗼𝘁**\n\n**{}**\n\n➖➖➖➖➖➖➖➖➖➖➖\n**👤 Owner:** `{}`\n**📂 Versão:** `{}`\n**⏲ Uptime:** `{}`\n🐍 **Python:** `{}`\n📤 **Branch:** `{}`\n➖➖➖➖➖➖➖➖➖➖➖"
 log: "**Heroku** Ultroid Logs.\nColado [aqui]({}) também!"
 ping: "**Pong !!** `{}ms`\n**Uptime** - `{}`"
-usage: "**⚙️ Uso Dyno ⚙️**:\n\n-> **Dyno usado por** `{}`:\n  •  **{}h**  **{}m** |** `[{}%]`\n-> **Dyno cota de horas restantes neste mês**:\n  •  **{}h**  **{}m |** `[{}%]`\n\n**Espaço Total em Disco**: `{}`\n**Usado**: `{}`\n**Livre**: `{}`\n\n**📊 Uso de Dados 📊\n**Upload**: `{}`\n**Down**: `{}`\n\n**CPU**: `{}%`\n**RAM**: `{}%`\n**DISCO**: `{}%`"
+usage: "**⚙️ Uso do Dynos**:\n\n-> **Dyno usado por** `{}`:\n  •  **{}h**  **{}m** |** `[{}%]`\n-> **Dyno cota de horas restantes neste mês**:\n  •  **{}h**  **{}m |** `[{}%]`\n\n**Espaço Total em Disco**: `{}`\n**Usado**: `{}`\n**Livre**: `{}`\n\n**📊 Uso de Dados\n**Upload**: `{}`\n**Down**: `{}`\n\n**CPU**: `{}%`\n**RAM**: `{}%`\n**DISCO**: `{}%`"
 shutdown: "Adeus {}.\n`Desligando...`"
 
 # broadcast
