@@ -47,6 +47,7 @@ async def e(o):
         ALIVEMSG = get_string("alive_1").format(
             header,
             OWNER_NAME,
+            OWNER_ID,
             ultroid_version,
             uptime,
             PyVer(),
