@@ -125,20 +125,20 @@ async def changes(okk):
     changelog_str = changelog + f"\n\nClick the below button to update!"
     if len(changelog_str) > 1024:
         await okk.edit(get_string("upd_4"))
-        file = open(f"ultroid_updates.txt", "w+")
+        file = open(f"excalibur_update.txt", "w+")
         file.write(tl_chnglog)
         file.close()
         await okk.edit(
             get_string("upd_5"),
-            file="ultroid_updates.txt",
-            buttons=Button.inline("Update Now", data="updatenow"),
+            file="excalibur_update.txt",
+            buttons=Button.inline("Atualizar agora", data="updatenow"),
         )
         remove(f"ultroid_updates.txt")
         return
     else:
         await okk.edit(
             changelog_str,
-            buttons=Button.inline("Update Now", data="updatenow"),
+            buttons=Button.inline("Atualizar agora", data="updatenow"),
             parse_mode="html",
         )
 
