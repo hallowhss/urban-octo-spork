@@ -48,10 +48,8 @@ async def e(o):
             header,
             OWNER_NAME,
             ultroid_version,
-            UltVer,
             uptime,
             PyVer(),
-            __version__,
             Repo().active_branch,
         )
         res = [
