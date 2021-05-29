@@ -173,18 +173,18 @@ async def _(event):
     changelog_str = changelog + f"\n\nClique no botão abaixo para atualizar!"
     if len(changelog_str) > 1024:
         await event.edit(get_string("upd_4"))
-        file = open(f"ultroid_updates.txt", "w+")
+        file = open(f"excalibur_update.txt", "w+")
         file.write(tl_chnglog)
         file.close()
         await event.edit(
             get_string("upd_5"),
-            file="ultroid_updates.txt",
+            file="excalibur_update.txt",
             buttons=[
                 [Button.inline("Atualizar agora", data="updatenow")],
                 [Button.inline("⬅ Voltar", data="ownr")],
             ],
         )
-        remove(f"ultroid_updates.txt")
+        remove(f"excalibur_update.txt")
         return
     else:
         await event.edit(
