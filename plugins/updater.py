@@ -30,7 +30,7 @@ async def _(e):
         x = await ultroid_bot.asst.send_file(
             int(udB.get("LOG_CHANNEL")),
             ULTPIC,
-            caption="• **Update Available** •",
+            caption="• **Ver Atualização** •",
             force_document=False,
             buttons=Button.inline("Changelogs", data="changes"),
         )
@@ -57,9 +57,9 @@ async def updava(event):
     await ultroid_bot.asst.send_file(
         int(udB.get("LOG_CHANNEL")),
         ULTPIC,
-        caption="• **Update Available** •",
+        caption="**Nova atualização disponível!**,
         force_document=False,
-        buttons=Button.inline("Changelogs", data="changes"),
+        buttons=Button.inline("Changelog", data="changes"),
     )
 
 
