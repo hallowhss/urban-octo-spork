@@ -95,17 +95,17 @@ async def inline_handler(event):
         ),
         buttons=[
             [
-                Button.inline("• Pʟᴜɢɪɴs", data="hrrrr"),
-                Button.inline("• Aᴅᴅᴏɴs", data="frrr"),
+                Button.inline("Plugins", data="hrrrr"),
+                Button.inline("Addons", data="frrr"),
             ],
             [
-                Button.inline("Oᴡɴᴇʀ•ᴛᴏᴏʟꜱ", data="ownr"),
-                Button.inline("Iɴʟɪɴᴇ•Pʟᴜɢɪɴs", data="inlone"),
+                Button.inline("Ferramentas de Owner", data="ownr"),
+                Button.inline("Inline Plugins", data="inlone"),
             ],
             [
-                Button.url("⚙️Sᴇᴛᴛɪɴɢs⚙️", url=f"https://t.me/{bnn}?start=set"),
+                Button.url("Opções", url=f"https://t.me/{bnn}?start=set"),
             ],
-            [Button.inline("••Cʟᴏꜱᴇ••", data="close")],
+            [Button.inline("Fechar", data="close")],
         ],
     )
     await event.answer([result])
@@ -148,14 +148,14 @@ async def setting(event):
         link_preview=False,
         buttons=[
             [
-                Button.inline("•Pɪɴɢ•", data="pkng"),
-                Button.inline("•Uᴘᴛɪᴍᴇ•", data="upp"),
+                Button.inline("Ping", data="pkng"),
+                Button.inline("Uptime", data="upp"),
             ],
             [
-                Button.inline("•Rᴇsᴛᴀʀᴛ•", data="rstrt"),
-                Button.inline("•Uᴘᴅᴀᴛᴇ•", data="doupdate"),
+                Button.inline("Reiniciar", data="rstrt"),
+                Button.inline("Atualizar", data="doupdate"),
             ],
-            [Button.inline("« Bᴀᴄᴋ", data="open")],
+            [Button.inline("⬅ Voltar", data="open")],
         ],
     )
 
@@ -166,12 +166,12 @@ async def _(event):
     check = await updater()
     if not check:
         return await event.answer(
-            "You Are Already On Latest Version", cache_time=0, alert=True
+            "Você já está na última versão!", cache_time=0, alert=True
         )
     repo = Repo.init()
     ac_br = repo.active_branch
     changelog, tl_chnglog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
-    changelog_str = changelog + f"\n\nClick the below button to update!"
+    changelog_str = changelog + f"\n\nClique no botão abaixo para atualizar!"
     if len(changelog_str) > 1024:
         await event.edit(get_string("upd_4"))
         file = open(f"ultroid_updates.txt", "w+")
@@ -181,8 +181,8 @@ async def _(event):
             get_string("upd_5"),
             file="ultroid_updates.txt",
             buttons=[
-                [Button.inline("• Uᴘᴅᴀᴛᴇ Nᴏᴡ •", data="updatenow")],
-                [Button.inline("« Bᴀᴄᴋ", data="ownr")],
+                [Button.inline("Atualizar agora", data="updatenow")],
+                [Button.inline("⬅ Voltar", data="ownr")],
             ],
         )
         remove(f"ultroid_updates.txt")
@@ -191,8 +191,8 @@ async def _(event):
         await event.edit(
             changelog_str,
             buttons=[
-                [Button.inline("Update Now", data="updatenow")],
-                [Button.inline("« Bᴀᴄᴋ", data="ownr")],
+                [Button.inline("Atualizar agora", data="updatenow")],
+                [Button.inline("⬅ Voltar", data="ownr")],
             ],
             parse_mode="html",
         )
@@ -203,14 +203,14 @@ async def _(event):
     start = datetime.now()
     end = datetime.now()
     ms = (end - start).microseconds / 1000
-    pin = f"🌋Pɪɴɢ = {ms}ms"
+    pin = f"🌋 Ping = {ms}ms"
     await event.answer(pin, cache_time=0, alert=True)
 
 
 @callback("upp")
 async def _(event):
     uptime = grt(time.time() - start_time)
-    pin = f"🙋Uᴘᴛɪᴍᴇ = {uptime}"
+    pin = f"🙋 Uptime = {uptime}"
     await event.answer(pin, cache_time=0, alert=True)
 
 
@@ -220,55 +220,55 @@ async def _(e):
     button = [
         [
             Button.switch_inline(
-                "Pʟᴀʏ Sᴛᴏʀᴇ Aᴘᴘs",
+                "Play Store Apps",
                 query="app telegram",
                 same_peer=True,
             ),
             Button.switch_inline(
-                "Mᴏᴅᴅᴇᴅ Aᴘᴘs",
+                "Apps Modificados",
                 query="mods minecraft",
                 same_peer=True,
             ),
         ],
         [
             Button.switch_inline(
-                "Sᴇᴀʀᴄʜ Oɴ Gᴏᴏɢʟᴇ",
-                query="go TeamUltroid",
+                "Pesquisa no Google",
+                query="go GitHub",
                 same_peer=True,
             ),
             Button.switch_inline(
-                "Sᴇᴀʀᴄʜ Oɴ Yᴀʜᴏᴏ",
-                query="yahoo TeamUltroid",
-                same_peer=True,
-            ),
-        ],
-        [
-            Button.switch_inline(
-                "WʜɪSᴘᴇʀ",
-                query="msg username wspr Hello",
-                same_peer=True,
-            ),
-            Button.switch_inline(
-                "YᴏᴜTᴜʙᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ",
-                query="yt Ed Sheeran Perfect",
+                "Pesquisa no Yahoo",
+                query="yahoo GitHub",
                 same_peer=True,
             ),
         ],
         [
             Button.switch_inline(
-                "CʟɪᴘAʀᴛ Sᴇᴀʀᴄʜ",
-                query="clipart frog",
+                "Whisper",
+                query="msg @username wspr Olá!",
                 same_peer=True,
             ),
             Button.switch_inline(
-                "OʀᴀɴɢᴇFᴏx🦊",
-                query="ofox beryllium",
+                "Youtube Downloader",
+                query="yt Chatuba de Mesquita",
+                same_peer=True,
+            ),
+        ],
+        [
+            Button.switch_inline(
+                "Pesquisa de Imagem",
+                query="clipart sapo",
+                same_peer=True,
+            ),
+            Button.switch_inline(
+                "OrangeFox",
+                query="ofox ginkgo",
                 same_peer=True,
             ),
         ],
         [
             Button.inline(
-                "« Bᴀᴄᴋ",
+                "⬅ Voltar",
                 data="open",
             ),
         ],
@@ -387,16 +387,16 @@ async def opner(event):
     bnn = asst.me.username
     buttons = [
         [
-            Button.inline("• Pʟᴜɢɪɴs ", data="hrrrr"),
-            Button.inline("• Aᴅᴅᴏɴs", data="frrr"),
+            Button.inline("Plugins ", data="hrrrr"),
+            Button.inline("Addons", data="frrr"),
         ],
         [
-            Button.inline("Oᴡɴᴇʀ•Tᴏᴏʟꜱ", data="ownr"),
-            Button.inline("Iɴʟɪɴᴇ•Pʟᴜɢɪɴs", data="inlone"),
+            Button.inline("Ferramentas", data="ownr"),
+            Button.inline("Inline Plugins", data="inlone"),
         ],
         [
             Button.url(
-                "⚙️Sᴇᴛᴛɪɴɢs⚙️",
+                "Opções",
                 url=f"https://t.me/{bnn}?start={ultroid_bot.me.id}",
             ),
         ],
@@ -425,7 +425,7 @@ async def on_plug_in_callback_query_handler(event):
     await event.edit(
         get_string("inline_5"),
         file=_file_to_replace,
-        buttons=Button.inline("Oᴘᴇɴ Mᴀɪɴ Mᴇɴᴜ Aɢᴀɪɴ", data="open"),
+        buttons=Button.inline("Abrir novamente", data="open"),
     )
 
 
@@ -437,7 +437,7 @@ async def on_plug_in_callback_query_handler(event):
 @owner
 async def on_plug_in_callback_query_handler(event):
     plugin_name = event.data_match.group(1).decode("UTF-8")
-    help_string = f"Plugin Name - `{plugin_name}`\n"
+    help_string = f"Nome do Plugin: `{plugin_name}`\n"
     try:
         for i in HELP[plugin_name]:
             help_string += i
@@ -451,13 +451,13 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         [
             Button.inline(
-                "« Sᴇɴᴅ Pʟᴜɢɪɴ »",
+                "⬅ Enviar Plugin ➡",
                 data=f"sndplug_{(event.data).decode('UTF-8')}",
             )
         ],
         [
-            Button.inline("« Bᴀᴄᴋ", data="back"),
-            Button.inline("••Cʟᴏꜱᴇ••", data="close"),
+            Button.inline("⬅ Voltar", data="back"),
+            Button.inline("Fechar", data="close"),
         ],
     ]
     try:
@@ -489,13 +489,13 @@ async def on_plug_in_callback_query_handler(event):
     except BaseException:
         try:
             for u in CMD_HELP[plugin_name]:
-                help_string = f"Plugin Name-{plugin_name}\n\n✘ Commands Available-\n\n"
+                help_string = f"Nome do Plugin:{plugin_name}\n\n❗ Comandos Disponíveis: \n\n"
                 help_string += str(CMD_HELP[plugin_name])
         except BaseException:
             try:
                 if plugin_name in LIST:
                     help_string = (
-                        f"Plugin Name-{plugin_name}\n\n✘ Commands Available-\n\n"
+                        f"Nome do Plugin:{plugin_name}\n\n❗ Comandos Disponíveis: \n\n"
                     )
                     for d in LIST[plugin_name]:
                         help_string += HNDLR + d
@@ -510,13 +510,13 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         [
             Button.inline(
-                "« Sᴇɴᴅ Pʟᴜɢɪɴ »",
+                "⬅ Enviar Plugin ➡",
                 data=f"sndplug_{(event.data).decode('UTF-8')}",
             )
         ],
         [
-            Button.inline("« Bᴀᴄᴋ", data="buck"),
-            Button.inline("••Cʟᴏꜱᴇ••", data="close"),
+            Button.inline("⬅ Voltar", data="buck"),
+            Button.inline("Fechar", data="close"),
         ],
     ]
     try:
@@ -540,7 +540,7 @@ def page_num(page_number, loaded_plugins, prefix, type):
     if emoji:
         multi = emoji
     else:
-        multi = "✘"
+        multi = "🔴"
     helpable_plugins = []
     global upage
     upage = page_number
@@ -569,12 +569,12 @@ def page_num(page_number, loaded_plugins, prefix, type):
         ] + [
             (
                 Button.inline(
-                    "« Pʀᴇᴠɪᴏᴜs",
+                    "⬅ Anterior",
                     data=f"{prefix}_prev({modulo_page})",
                 ),
                 Button.inline("« Bᴀᴄᴋ »", data="open"),
                 Button.inline(
-                    "Nᴇxᴛ »",
+                    "Próximo ➡",
                     data=f"{prefix}_next({modulo_page})",
                 ),
             ),
@@ -582,5 +582,5 @@ def page_num(page_number, loaded_plugins, prefix, type):
     else:
         pairs = pairs[
             modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
-        ] + [(Button.inline("« Bᴀᴄᴋ »", data="open"),)]
+        ] + [(Button.inline("⬅ Voltar ➡", data="open"),)]
     return pairs
