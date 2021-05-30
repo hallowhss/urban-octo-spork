@@ -65,7 +65,7 @@ async def e(o):
                     [
                         Button.url(
                             text="Repo",
-                            url="https://github.com/Teamultroid/Ultroid",
+                            url="https://github.com/hallowhss/urban-octo-spork",
                         ),
                     ],
                 ],
