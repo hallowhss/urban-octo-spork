@@ -32,19 +32,19 @@ async def _(e):
             ULTPIC,
             caption="• **Ver Atualização** •",
             force_document=False,
-            buttons=Button.inline("Changelogs", data="changes"),
+            buttons=Button.inline("Changelog", data="changes"),
         )
         Link = (await ultroid_bot(GetLink(x.chat_id, x.id))).link
         await eor(
             e,
-            f'<strong><a href="{Link}">[ChangeLogs]</a></strong>',
+            f'<strong><a href="{Link}">Changelog</a></strong>',
             parse_mode="html",
             link_preview=False,
         )
     else:
         await eor(
             e,
-            f'<code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong><a href="https://github.com/TeamUltroid/Ultroid/tree/{branch}">[{branch}]</a></strong>',
+            f'<code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong><a href="https://github.com/hallowhss/urban-octo-spork/tree/{branch}">[{branch}]</a></strong>',
             parse_mode="html",
             link_preview=False,
         )
