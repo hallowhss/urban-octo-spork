@@ -397,7 +397,7 @@ async def opner(event):
                 url=f"https://t.me/{bnn}?start={ultroid_bot.me.id}",
             ),
         ],
-        [Button.inline("••Cʟᴏꜱᴇ••", data="close")],
+        [Button.inline("Fechar", data="close")],
     ]
     z = []
     for x in LIST.values():
@@ -448,7 +448,7 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         [
             Button.inline(
-                "⬅ Enviar Plugin ➡",
+                "Baixar Plugin",
                 data=f"sndplug_{(event.data).decode('UTF-8')}",
             )
         ],
@@ -507,7 +507,7 @@ async def on_plug_in_callback_query_handler(event):
     buttons = [
         [
             Button.inline(
-                "⬅ Enviar Plugin ➡",
+                "Baixar Plugin",
                 data=f"sndplug_{(event.data).decode('UTF-8')}",
             )
         ],
@@ -569,7 +569,7 @@ def page_num(page_number, loaded_plugins, prefix, type):
                     "⬅ Anterior",
                     data=f"{prefix}_prev({modulo_page})",
                 ),
-                Button.inline("« Bᴀᴄᴋ »", data="open"),
+                Button.inline("Voltar", data="open"),
                 Button.inline(
                     "Próximo ➡",
                     data=f"{prefix}_next({modulo_page})",
@@ -579,5 +579,5 @@ def page_num(page_number, loaded_plugins, prefix, type):
     else:
         pairs = pairs[
             modulo_page * number_of_rows : number_of_rows * (modulo_page + 1)
-        ] + [(Button.inline("⬅ Voltar ➡", data="open"),)]
+        ] + [(Button.inline("Voltar", data="open"),)]
     return pairs
