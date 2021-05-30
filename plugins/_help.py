@@ -29,12 +29,12 @@ async def ult(ult):
                 output += "\n© @TeamUltroid"
                 await eor(ult, output)
             elif plug in CMD_HELP:
-                kk = f"Plugin Name-{plug}\n\n✘ Commands Available -\n\n"
+                kk = f"Nome do Plugin:{plug}\n\nComandos disponíveis:\n\n"
                 kk += str(CMD_HELP[plug])
                 await eor(ult, kk)
             else:
                 try:
-                    x = f"Plugin Name-{plug}\n\n✘ Commands Available -\n\n"
+                    x = f"Nome do Plugin:{plug}\n\nComandos disponíveis:\n\n"
                     for d in LIST[plug]:
                         x += HNDLR + d
                         x += "\n"
@@ -71,7 +71,7 @@ async def ult(ult):
                         Button.inline("Iɴʟɪɴᴇ•Pʟᴜɢɪɴs", data="inlone"),
                     ],
                     [Button.url("⚙️Sᴇᴛᴛɪɴɢs⚙️", url=f"https://t.me/{bnn}?start=set")],
-                    [Button.inline("••Cʟᴏꜱᴇ••", data="close")],
+                    [Button.inline("Fechar", data="close")],
                 ],
             )
         except rep:
