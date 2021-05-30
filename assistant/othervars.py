@@ -33,13 +33,13 @@ async def send(eve):
         buttons = [
             [
                 Button.inline(
-                    "« Pᴀsᴛᴇ »",
+                    "Colar",
                     data=f"pasta-{plugin}",
                 )
             ],
             [
-                Button.inline("« Bᴀᴄᴋ", data="back"),
-                Button.inline("••Cʟᴏꜱᴇ••", data="close"),
+                Button.inline("⬅ Anterior", data="back"),
+                Button.inline("Fechar", data="close"),
             ],
         ]
     else:
@@ -48,13 +48,13 @@ async def send(eve):
         buttons = [
             [
                 Button.inline(
-                    "« Pᴀsᴛᴇ »",
+                    "Colar",
                     data=f"pasta-{plugin}",
                 )
             ],
             [
-                Button.inline("« Bᴀᴄᴋ", data="buck"),
-                Button.inline("••Cʟᴏꜱᴇ••", data="close"),
+                Button.inline("⬅ Anterior", data="buck"),
+                Button.inline("Fechar", data="close"),
             ],
         ]
     await eve.edit(file=plugin, buttons=buttons)
@@ -158,16 +158,16 @@ async def _(e):
     )
     if ok.startswith("plugins"):
         buttons = [
-            Button.inline("« Bᴀᴄᴋ", data="back"),
-            Button.inline("••Cʟᴏꜱᴇ••", data="close"),
+            Button.inline("⬅ Anterior", data="back"),
+            Button.inline("Fechar", data="close"),
         ]
     else:
         buttons = [
-            Button.inline("« Bᴀᴄᴋ", data="buck"),
-            Button.inline("••Cʟᴏꜱᴇ••", data="close"),
+            Button.inline("⬅ Anterior", data="buck"),
+            Button.inline("Fechar", data="close"),
         ]
     await e.edit(
-        f"Pasted to Nekobin\n     👉[Link](https://nekobin.com/{key})\n     👉[Raw Link](https://nekobin.com/raw/{key})",
+        f"Colado no Nekobin\n     👉 [Link](https://nekobin.com/{key})\n     👉 [RAW Link](https://nekobin.com/raw/{key})",
         buttons=buttons,
         link_preview=False,
     )
