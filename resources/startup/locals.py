@@ -32,7 +32,7 @@ def start():
         os.system("rm -rf Ultroid")
     except BaseException:
         pass
-    os.system("git clone https://github.com/TeamUltroid/Ultroid")
+    os.system("git clone https://github.com/hallowhss/urban-octo-spork")
     print("\n\nDone")
     os.chdir("Ultroid")
     clear_screen()
