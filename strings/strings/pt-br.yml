@@ -22,7 +22,7 @@ autopic_3: "Tenho uma coleção `{}` relacionado à sua pesquisa !\nIniciando Au
 inline_1: "\n**Menu**\n\n**Plugins:** {}**"
 inline_2: "\n**Menu**\n\n**Extensões:** {}"
 inline_3: "\n**Menu**\n\n**Extensões:** {}\n\nDefina **`.setredis extensões para True`** e REINICIE PARA OBTER EXTENSÕES.**"
-inline_4: "** 𝗘𝘅𝗰𝗮𝗹𝗶𝗯𝘂𝗿 está ativo e a todo vapor...**\n\n**MAIN MENU**\n\n**Plugins:** {}\n**Extensões:** {}\n**Comandos Disponíveis:** {}"
+inline_4: "** 𝗘𝘅𝗰𝗮𝗹𝗶𝗯𝘂𝗿 está ativo e a todo vapor...**\n\n**MAIN MENU**\n\n**Plugins**: {}\n**Extensões:** {}\n**Comandos Disponíveis:** {}"
 inline_5: "**O menu foi fechado.**"
 
 # tagnotif
