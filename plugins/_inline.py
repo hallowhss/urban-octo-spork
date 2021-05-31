@@ -276,7 +276,7 @@ async def _(e):
 @callback("hrrrr")
 @owner
 async def on_plug_in_callback_query_handler(event):
-    xhelps = helps.format(OWNER_NAME, len(PLUGINS))
+    xhelps = helps.format(len(PLUGINS))
     buttons = page_num(0, PLUGINS, "helpme", "def")
     await event.edit(f"{xhelps}", buttons=buttons, link_preview=False)
 
@@ -284,7 +284,7 @@ async def on_plug_in_callback_query_handler(event):
 @callback("frrr")
 @owner
 async def addon(event):
-    halp = zhelps.format(OWNER_NAME, len(ADDONS))
+    halp = zhelps.format(len(ADDONS))
     if len(ADDONS) > 0:
         buttons = page_num(0, ADDONS, "addon", "add")
         await event.edit(f"{halp}", buttons=buttons, link_preview=False)
@@ -353,7 +353,7 @@ async def on_plug_in_callback_query_handler(event):
 @callback("back")
 @owner
 async def backr(event):
-    xhelps = helps.format(OWNER_NAME, len(PLUGINS))
+    xhelps = helps.format(len(PLUGINS))
     current_page_number = int(upage)
     buttons = page_num(current_page_number, PLUGINS, "helpme", "def")
     await event.edit(
@@ -367,7 +367,7 @@ async def backr(event):
 @callback("buck")
 @owner
 async def backr(event):
-    xhelps = zhelps.format(OWNER_NAME, len(ADDONS))
+    xhelps = zhelps.format(len(ADDONS))
     current_page_number = int(upage)
     buttons = page_num(current_page_number, ADDONS, "addon", "add")
     await event.edit(
