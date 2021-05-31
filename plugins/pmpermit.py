@@ -59,15 +59,15 @@ UND = get_string("pmperm_1")
 
 if not Redis("PM_TEXT"):
     UNAPPROVED_MSG = """
-**PMSecurity of {ON}!**
+**PMSecurity de {ON}!**
 
 {UND}
 
-You have {warn}/{twarn} warnings!"""
+Você tem {warn}/{twarn} avisos!"""
 else:
     UNAPPROVED_MSG = (
         """
-**PMSecurity of {ON}!**"""
+**PMSecurity de {ON}!**"""
         f"""
 
 {Redis("PM_TEXT")}
@@ -76,7 +76,7 @@ else:
 
 {UND}
 
-You have {warn}/{twarn} warnings!"""
+Você tem {warn}/{twarn} avisos!"""
     )
 
 UNS = get_string("pmperm_2")
@@ -219,8 +219,8 @@ if sett == "True" and sett != "False":
                         int(udB.get("LOG_CHANNEL")),
                         f"Incoming PM from {mention}!",
                         buttons=[
-                            Button.inline("Approve PM", data=f"approve_{user.id}"),
-                            Button.inline("Block PM", data=f"block_{user.id}"),
+                            Button.inline("Aprovar PM", data=f"approve_{user.id}"),
+                            Button.inline("Bloquear PM", data=f"block_{user.id}"),
                         ],
                     )
                 except BaseException:
@@ -314,7 +314,7 @@ if sett == "True" and sett != "False":
                 except KeyError:
                     await event.client.send_message(
                         int(udB.get("LOG_CHANNEL")),
-                        "PMPermit is messed! Pls restart the bot!!",
+                        "PMPermit está bagunçado! Por favor, reinicie o bot.",
                     )
                     return LOGS.info("COUNT_PM is messed.")
                 await event.client(BlockRequest(user.id))
@@ -323,7 +323,7 @@ if sett == "True" and sett != "False":
                 name0 = str(name.first_name)
                 await event.client.send_message(
                     int(udB.get("LOG_CHANNEL")),
-                    f"[{name0}](tg://user?id={user.id}) was Blocked for spamming.",
+                    f"[{name0}](tg://user?id={user.id}) foi bloqueado por perturbar.",
                 )
 
     @ultroid_cmd(
@@ -355,7 +355,7 @@ if sett == "True" and sett != "False":
             if str(aname) in DEVLIST:
                 return await eor(
                     apprvpm,
-                    "Lol, He is my Developer\nHe is auto Approved",
+                    "LOL, esse é meu desenvolvedor.\nEle é aprovado automaticamente!",
                 )
             name0 = str(replied_user.first_name)
             uid = replied_user.id
@@ -365,11 +365,11 @@ if sett == "True" and sett != "False":
                     await apprvpm.client.edit_folder(uid, folder=0)
                 except BaseException:
                     pass
-                await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `approved to PM!`")
+                await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `Aprovado! Agora pode mandar mensagens.`")
                 await asyncio.sleep(3)
                 await apprvpm.delete()
             else:
-                await apprvpm.edit("`User may already be approved.`")
+                await apprvpm.edit("`Usuário já foi aprovado.`")
                 await asyncio.sleep(5)
                 await apprvpm.delete()
         elif apprvpm.is_private:
@@ -378,7 +378,7 @@ if sett == "True" and sett != "False":
             if str(user.id) in DEVLIST:
                 return await eor(
                     apprvpm,
-                    "Lol, He is my Developer\nHe is auto Approved",
+                    "LOL, esse é meu desenvolvedor.\nEle é aprovado automaticamente!",
                 )
             name0 = str(aname.first_name)
             uid = user.id
@@ -388,7 +388,7 @@ if sett == "True" and sett != "False":
                     await apprvpm.client.edit_folder(uid, folder=0)
                 except BaseException:
                     pass
-                await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `approved to PM!`")
+                await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `Aprovado! Agora pode mandar mensagens.`")
                 async for message in apprvpm.client.iter_messages(user.id, search=UND):
                     await message.delete()
                 async for message in apprvpm.client.iter_messages(user.id, search=UNS):
@@ -400,7 +400,7 @@ if sett == "True" and sett != "False":
                     f"#APPROVED\nUser: [{name0}](tg://user?id={uid})",
                 )
             else:
-                await apprvpm.edit("`User may already be approved.`")
+                await apprvpm.edit("`Usuário já foi aprovado.`")
                 await asyncio.sleep(5)
                 await apprvpm.delete()
                 await apprvpm.client.send_message(
@@ -421,19 +421,19 @@ if sett == "True" and sett != "False":
             if str(aname) in DEVLIST:
                 return await eor(
                     e,
-                    "`Lol, He is my Developer\nHe Can't Be DisApproved.`",
+                    "`LOL, esse é meu desenvolvedor.\nEle não pode ser desaprovado.`",
                 )
             name0 = str(replied_user.first_name)
             if is_approved(replied_user.id):
                 disapprove_user(replied_user.id)
                 await e.edit(
-                    f"[{name0}](tg://user?id={replied_user.id}) `Disaproved to PM!`",
+                    f"[{name0}](tg://user?id={replied_user.id}) `PM negado!`",
                 )
                 await asyncio.sleep(5)
                 await e.delete()
             else:
                 await e.edit(
-                    f"[{name0}](tg://user?id={replied_user.id}) was never approved!",
+                    f"[{name0}](tg://user?id={replied_user.id}) nunca foi aprovado!",
                 )
                 await asyncio.sleep(5)
                 await e.delete()
@@ -443,20 +443,20 @@ if sett == "True" and sett != "False":
             if str(bbb.id) in DEVLIST:
                 return await eor(
                     e,
-                    "`Lol, He is my Developer\nHe Can't Be DisApproved.`",
+                    "`LOL, esse é meu desenvolvedor.\nEle não pode ser desaprovado.!`",
                 )
             name0 = str(aname.first_name)
             if is_approved(bbb.id):
                 disapprove_user(bbb.id)
-                await e.edit(f"[{name0}](tg://user?id={bbb.id}) `Disaproved to PM!`")
+                await e.edit(f"[{name0}](tg://user?id={bbb.id}) `PM negado!`")
                 await asyncio.sleep(5)
                 await e.delete()
                 await e.client.send_message(
                     int(udB.get("LOG_CHANNEL")),
-                    f"[{name0}](tg://user?id={bbb.id}) was disapproved to PM you.",
+                    f"[{name0}](tg://user?id={bbb.id}) foi desaprovado para mandar um PM para você.",
                 )
             else:
-                await e.edit(f"[{name0}](tg://user?id={bbb.id}) was never approved!")
+                await e.edit(f"[{name0}](tg://user?id={bbb.id}) nunca foi aprovado!")
                 await asyncio.sleep(5)
                 await e.delete()
         else:
@@ -480,11 +480,11 @@ async def blockpm(block):
     if str(user) in DEVLIST:
         return await eor(
             block,
-            "`Lol, He is my Developer\nHe Can't Be Blocked`",
+            "`LOL, esse é meu desenvolvedor.\nEle não pode ser bloqueado.`",
         )
     await block.client(BlockRequest(user))
     aname = await block.client.get_entity(user)
-    await eor(block, f"`{aname.first_name} has been blocked!`")
+    await eor(block, f"`{aname.first_name} foi bloqueado!!`")
     try:
         disapprove_user(user)
     except AttributeError:
@@ -524,7 +524,7 @@ async def unblockpm(unblock):
 async def apr_in(event):
     uid = int(event.data_match.group(1).decode("UTF-8"))
     if str(uid) in DEVLIST:
-        await event.edit("It's a dev! Approved!")
+        await event.edit("Um desenvolvedor! Aprovado.")
     if not is_approved(uid):
         approve_user(uid)
         try:
@@ -538,24 +538,24 @@ async def apr_in(event):
         await event.edit(
             f"[{user_name}](tg://user?id={uid}) `approved to PM!`",
             buttons=[
-                Button.inline("Disapprove PM", data=f"disapprove_{uid}"),
-                Button.inline("Block", data=f"block_{uid}"),
+                Button.inline("Rejeitar PM", data=f"disapprove_{uid}"),
+                Button.inline("Bloquear", data=f"block_{uid}"),
             ],
         )
         async for message in ultroid.iter_messages(uid, search=UND):
             await message.delete()
         async for message in ultroid.iter_messages(uid, search=UNS):
             await message.delete()
-        await event.answer("Approved.")
-        x = await ultroid.send_message(uid, "You have been approved to PM me!")
+        await event.answer("Aprovado.")
+        x = await ultroid.send_message(uid, "Você foi aprovado! Agora pode me enviar mensagens.")
         await asyncio.sleep(5)
         await x.delete()
     else:
         await event.edit(
-            "`User may already be approved.`",
+            "`Usuário já foi aprovado.`",
             buttons=[
-                Button.inline("Disapprove PM", data=f"disapprove_{uid}"),
-                Button.inline("Block", data=f"block_{uid}"),
+                Button.inline("Rejeitar PM", data=f"disapprove_{uid}"),
+                Button.inline("Bloquear", data=f"block_{uid}"),
             ],
         )
 
@@ -577,12 +577,12 @@ async def disapr_in(event):
         await event.edit(
             f"[{user_name}](tg://user?id={uid}) `disapproved from PMs!`",
             buttons=[
-                Button.inline("Approve PM", data=f"approve_{uid}"),
-                Button.inline("Block", data=f"block_{uid}"),
+                Button.inline("Aprovar PM", data=f"approve_{uid}"),
+                Button.inline("Bloquear", data=f"block_{uid}"),
             ],
         )
-        await event.answer("DisApproved.")
-        x = await ultroid.send_message(uid, "You have been disapproved from PMing me!")
+        await event.answer("Rejeitado..")
+        x = await ultroid.send_message(uid, "Você não foi aprovado para me mandar mensagens, por favor não insista.")
         await asyncio.sleep(5)
         await x.delete()
     else:
