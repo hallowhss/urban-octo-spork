@@ -128,11 +128,6 @@ gdrive_5: "`Successo!\nVocê está pronto para usar o Google Drive com Ultroid U
 gdrive_6: "`Ir para `{}` e envie ``/auth.`"
 gdrive_7: "**O upload do Arquivo No G-Drive foi bem Sucedido :**\n\n[{}]({})"
 
-# pmpermit
-pmperm_1: "Por favor espere até eu te responder ou você será reportado e bloqueado como spam!!"
-pmperm_2: "Você Esta Spamando O PV Do meu Mestre, o que você quer?\nVocê foi BLOQUEADO e denunciado como SPAM, até novo aviso."
-pmperm_3: "Responda à mensagem de alguém ou use esse comando no privado."
-
 # updater
 upd_1: "`Verificando Atualizações, por favor aguarde....`"
 upd_2: "`Oops.. O Atualizador não pode Continuar Devido a alguns Problemas.`\n\n**LOGTRACE:**\n"
