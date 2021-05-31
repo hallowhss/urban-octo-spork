@@ -388,7 +388,7 @@ async def opner(event):
             Button.inline("Addons", data="frrr"),
         ],
         [
-            Button.inline("Ferramentas", data="ownr"),
+            Button.inline("Ferramentas de Owner", data="ownr"),
             Button.inline("Inline Plugins", data="inlone"),
         ],
         [
@@ -406,7 +406,6 @@ async def opner(event):
     cmd = len(z) + 10
     await event.edit(
         get_string("inline_4").format(
-            OWNER_NAME,
             len(PLUGINS),
             len(ADDONS),
             cmd,
